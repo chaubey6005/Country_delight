@@ -1,0 +1,37 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title%}Home{% endblock title%}
+{% load socialaccount %}
+{% block main-content %}
+<div class="container mt-5">
+
+    <form action="" method="post" class="mt-5 p-3 m-3 d-flex justify-content-center align-items-center ">
+        {% csrf_token %}
+        <div class="row mt-5 mb-4 d-flex border rounded shadow p-3 w-50">
+            <h3 class="text-center mt-1">Login Page</h3>
+            <label for="username" class="fs-5 fw-medium p-2">Username</label>
+            <input type="text" placeholder="Username" name="fusername" id="fusername" class="rounded-2 border border-info bg-white fs-5">
+
+            <label for="password1" class="fs-5 fw-medium p-2">Password</label>
+            <input type="password" placeholder="Password" id="password1" name="pass1" class="rounded-2 border border-info bg-white fs-5">
+            <small class="mt-2 fs-5"><a href="{% url 'password_reset' %}" class="fw-medium" >Forgot Password ?</a></small><br>
+            <button type="submit" class="mt-3 p-2 fs-5 fw-bold bg-success text-white rounded-3 border border-white">Login</button>
+            <span class="text-decoration-none text-danger text-center fs-5 fw-medium mt-3">New User ?  <a href="{% url 'register' %}" class="text-decoration-underline text-info-subtle fs-5 fw-medium mt-3">Create a New Account</a></span>
+            <span class="text-center mt-3 fs-4 fw-bold"> OR </span>
+            <span class="border border-dark p-2 rounded-3 text-center fs-5 fw-medium mt-3"><img src="{% static 'app/images/banner/google.png' %}" class="img-top img-responsive" width="40" alt="">  <a href="{% provider_login_url 'google' %}?next=/" class="text-decoration-none text-dark ms-3 fs-5 fw-medium mt-3">Login With Google</a></span>
+            <div class="row text-center m-2">
+                {% if errmsg %}
+                <div class="alert alert-danger  fs-5 fw-medium">
+                    {{errmsg}}
+                </div>
+                {% endif %}
+                {% if success %}
+                <div class="alert alert-success fs-5 fw-medium">
+                    {{success}}
+                </div>
+                {% endif%}
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock main-content %}

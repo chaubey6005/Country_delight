@@ -1,0 +1,41 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock title %}
+{% block main-content %}
+<div class="container mt-5 my-5">
+    <div class="row mt-5">
+        <div class="col-lg-6 mt-5">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Feel free to reach out to us with any questions, feedback, or inquiries.</p>
+            <ul style="list-style-type: none;">
+                <li class="fw-medium"><i class="fas fa-map-marker-alt"></i>  Singhad Road, Pune</li>
+                <li class="fw-medium"><i class="fas fa-phone-alt"></i>  +91-9555641293</li>
+                <li class="fw-medium"><i class="fas fa-envelope"></i>  chaubey6005@gmail.com</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 mt-5">
+            <!-- Contact Form (You can replace this with your preferred contact form implementation) -->
+            <form name="submit-to-google-sheet">
+                <div class="mb-3">
+                    <label for="name" class="form-label fw-medium">Your Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label fw-medium">Your Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label fw-medium">Your Message</label>
+                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <span id="msg"></span>
+            </form>
+        </div>
+    </div>
+</div>
+<br><br>
+{% endblock main-content %}
+
+
+

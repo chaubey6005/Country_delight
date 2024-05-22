@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body {
+    overflow: hidden;
+}
+body {
+    scrollbar-width: none;
+}
+
+.main-container {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+    /* Adjust the height as needed */
+}
+.modify {
+    width: 90vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid white;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

@@ -1,0 +1,121 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title%}Products{% endblock title%}
+
+{% block main-content %}
+<link rel="stylesheet" href="{% static 'app/css/product.css' %}">
+<div class="main-container mt-4 pb-4 pt-4">
+    <div class="row mx-auto mt-5 mb-5 pb-4 modify">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="card mb-3 mt-3" style="width: 600px; height:200px;">
+                <div class="row g-2">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="circular-container"
+                            style="background-color: #fddfb2; display: flex; justify-content: center; align-items: center; width: 120px; height: 120px; border-radius: 50%;">
+                            <img src="{% static 'app/images/product/row1.png' %}" class="img-fluid rounded-start"
+                                alt="..." width="100px" style="border-radius: 25%;">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body mt-3 mb-2">
+                            <h5 class="card-title fs-6 fw-bold">Milk & Coconut Water</h5>
+                            <p class="card-text fw-medium">Buy Milk Online - Country Delight Promises pure quality milk delivered daily</p>
+                            <p class="card-text"></p>
+                            <a href="{% url 'category' 'MC' %}"><button type="button" class="btn btn-success">View Products</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="card mb-3 mt-3" style="width: 600px; height:200px;">
+                <div class="row g-2">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="circular-container"
+                            style="background-color: #fddfb2; display: flex; justify-content: center; align-items: center; width: 120px; height: 120px; border-radius: 50%;">
+                            <img src="{% static 'app/images/product/row2.png' %}" class="img-fluid rounded-start"
+                                alt="..." width="100px" style="border-radius: 25%;">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body mt-3 mb-2">
+                            <h5 class="card-title fs-6 fw-bold">Breads & Eggs</h5>
+                            <p class="card-text">Buy Bread Online - Tasty and healthy bakery range with No-Preservatives
+                                processing. <br>
+                            </p>
+                            <a href="{% url 'category' 'BE' %}"><button type="button" class="btn btn-success">View Products</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="card mb-3 mt-2" style="width: 600px; height:200px;">
+                <div class="row g-2">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="circular-container"
+                            style="background-color: #fddfb2; display: flex; justify-content: center; align-items: center; width: 120px; height: 120px; border-radius: 50%;">
+                            <img src="{% static 'app/images/product/row3.png' %}" class="img-fluid rounded-start"
+                                alt="..." width="100px" style="border-radius: 25%;">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body mt-3 mb-2">
+                            <h5 class="card-title fs-6 fw-bold">Country Specials</h5>
+                            <p class="card-text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Step into the world of Country Specials where every product tells a
+                                story and is crafted with utmost care. This curated range focuses on dairy products that
+                                will keep you cool this summer season. From sweet to sour, from thick to gulpabale our
+                                Country Specials has something for everyone’s preferences. You will find our iconic
+                                Coconut Water in its tender form here, sharing the limelight with GI tagged Ratnagiri
+                                Alphonsoes, every summer. Everything in Country Delight’s special range is 100% pure and
+                                natural. In their natural most form, besides good nutrition, these products are also a
+                                good choice for many other reasons</p>
+                                <a href="{% url 'category' 'CS' %}"><button type="button" class="btn btn-success">View Products</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="card mb-3 mt-3" style="width: 600px; height:200px;">
+                <div class="row g-2">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="circular-container"
+                            style="background-color: #fddfb2; display: flex; justify-content: center; align-items: center; width: 120px; height: 120px; border-radius: 50%;">
+                            <img src="{% static 'app/images/product/row4.png' %}" class="img-fluid rounded-start"
+                                alt="..." width="100px" style="border-radius: 25%;">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body mt-3 mb-2">
+                            <h5 class="card-title fs-6 fw-bold">Pulses (Chemical-free)</h5>
+                            <p class="card-text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Welcome to our special selection of premium pulses from India's top pulses farming states. To guarantee that you receive only the best, Country Delight ensures careful sourcing and thorough testing. All Country Delight pulses are completely unpolished, unadulterated, and subject to stringent sorting to remove husk or stones. You can rely these pulses to cook evenly and taste delicious.</p>
+                            <a href="{% url 'category' 'PL' %}"><button type="button" class="btn btn-success">View Products</button></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="card mb-3 mt-3" style="width: 600px; height:200px;">
+                <div class="row g-2">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="circular-container"
+                            style="background-color: #fddfb2; display: flex; justify-content: center; align-items: center; width: 120px; height: 120px; border-radius: 50%;">
+                            <img src="{% static 'app/images/product/row5.png' %}" class="img-fluid rounded-start"
+                                alt="..." width="100px" style="border-radius: 25%;">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body mt-3 mb-2">
+                            <h5 class="card-title fs-6 fw-bold">Dry fruits & Seeds</h5>
+                            <p class="card-text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Explore the finest collection of dry fruits on Country Delight app that nature has to offer. Country Delight is your gateway to a world of delicious and wholesome treats that are not only a delight to your taste buds but also contribute to your overall well-being. Each product is carefully sourced, ensuring that you receive nothing but the best quality, unadulterated, and natural dry fruits from the most esteemed locations around the world.</p>
+                            <a href="{% url 'category' 'FR' %}"><button type="button" class="btn btn-success">View Products</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}
