@@ -17,13 +17,19 @@
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
     <title>Country Delight | {% block title %}{% endblock title %}</title>
+    <style>
+        .navbar-hidden {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
 
 
 </head>
 
 <body>
     <!-- nav bar start -->
-    <nav class="navbar navbar-expand-lg fixed-top mx-auto navbar-dark bg-warning mx-auto">
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top mx-auto navbar-dark bg-warning mx-auto">
         <div class="container-fluid  pe-5 ps-4">
             <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'app/images/banner/icon.png' %}"
                     alt="loading image" height="50px" width="50px" /></a>
@@ -152,6 +158,23 @@
                 })
                 .catch(error => console.error('Error!', error.message))
         })
+    </script>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+    
+        window.addEventListener('scroll', function () {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+            if (scrollTop > lastScrollTop) {
+                // Scroll Down
+                navbar.classList.add('navbar-hidden');
+            } else {
+                // Scroll Up
+                navbar.classList.remove('navbar-hidden');
+            }
+            lastScrollTop = scrollTop;
+        });
     </script>
 </body>
 
